@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Card Without Image</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg,#1d2671,#c33764);
+  padding:20px;
+}
+
+/* Card */
+.profile-card{
+  width:100%;
+  max-width:380px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius:18px;
+  padding:30px;
+  text-align:center;
+  color:#fff;
+  box-shadow:0 20px 40px rgba(0,0,0,0.3);
+  transition:0.4s ease;
+}
+
+.profile-card:hover{
+  transform: translateY(-10px);
+  box-shadow:0 30px 60px rgba(0,0,0,0.4);
+}
+
+/* Initial Letter Circle Instead of Image */
+.initial{
+  width:80px;
+  height:80px;
+  margin:auto;
+  border-radius:50%;
+  background:#facc15;
+  color:#000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:2rem;
+  font-weight:bold;
+  margin-bottom:15px;
+  transition:0.4s;
+}
+
+.profile-card:hover .initial{
+  transform:scale(1.1);
+}
+
+/* Name */
+h2{
+  font-size:1.6rem;
+  margin-bottom:5px;
+}
+
+/* Role */
+.role{
+  font-size:0.95rem;
+  color:#facc15;
+  margin-bottom:15px;
+}
+
+/* Description */
+.bio{
+  font-size:0.9rem;
+  line-height:1.5;
+  opacity:0.9;
+}
+
+/* Buttons */
+.buttons{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.buttons a{
+  padding:9px 20px;
+  border-radius:25px;
+  background:#facc15;
+  color:#000;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.buttons a:hover{
+  background:#fff;
+  transform:scale(1.05);
+}
+
+/* Responsive */
+@media (min-width:768px){
+  .profile-card{
+    max-width:420px;
+  }
+  h2{
+    font-size:1.8rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="profile-card">
+  <div class="initial">R</div>
+  <h2>Rithikha B</h2>
+  <p class="role">Engineering Student</p>
+  <p class="bio">
+    Interested in web development and building creative engineering projects with modern technologies.
+  </p>
+
+  <div class="buttons">
+    <a href="#">Contact</a>
+    <a href="#">Portfolio</a>
+  </div>
+</div>
+
+</body>
+</html>
+
